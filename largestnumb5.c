@@ -2,21 +2,21 @@
 #include<conio.h>
 void main()
 {
-int a,b,c;
-clrscr();
-printf("Enter three numbers :");
-scanf("\%d%d%d",&a,&b,&c);
-if(c>b && c>a)
-{
-printf("%d is the largest number",c);
+	int n,p=0;
+
+	printf("enter total number of numbers");
+	scanf("%d",&n);
+	int larg[n];
+    for(int i=0;i<n;i++)
+	{
+		printf("enter no:");
+		scanf("%d",&larg[i]);
+	}
+	for(int i=0;i<n;i++)
+	{
+		if(p<larg[i])
+			p=larg[i];
+	}
+	printf("the largest number is %d",p);
 }
-else if(b>a)
-{
-printf("%d is the largest number",b);
-}
-else
-{
-printf("%d is the largest number",a);
-}
-getch();
-}
+
